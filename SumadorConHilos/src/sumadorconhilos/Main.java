@@ -209,11 +209,11 @@ public class Main extends javax.swing.JFrame {
                 if (ValueLabel < 50) {
                     ValueLabel++;
                     Namelabel = Hilo.getName();
-                    try {
+                    /*try {
                         Thread.sleep(300);
                     } catch (InterruptedException ex) {
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    }*/
                 }
                 mutex.release();
                 LabelNumber.setText(ValueLabel+"");
@@ -242,11 +242,11 @@ public class Main extends javax.swing.JFrame {
                 if (ValueLabel > 10) {
                     ValueLabel = ValueLabel-10;
                     Namelabel = Hilo.getName();
-                    try {
+                    /*try {
                         Thread.sleep(300);
                     } catch (InterruptedException ex) {
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    }*/
                 }
                 mutex.release();
                 LabelNumber.setText(ValueLabel+"");
