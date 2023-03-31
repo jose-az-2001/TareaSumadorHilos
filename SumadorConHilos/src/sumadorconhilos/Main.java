@@ -57,21 +57,19 @@ public class Main extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         LabelNumber.setFont(new java.awt.Font("Franklin Gothic Book", 1, 48)); // NOI18N
-        LabelNumber.setForeground(new java.awt.Color(0, 0, 0));
         LabelNumber.setText("0");
 
         LabelName.setFont(new java.awt.Font("Franklin Gothic Book", 1, 48)); // NOI18N
-        LabelName.setForeground(new java.awt.Color(0, 0, 0));
         LabelName.setText("?");
 
-        btnProductor.setText("jButton3");
+        btnProductor.setText("Activar Productores");
         btnProductor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProductorActionPerformed(evt);
             }
         });
 
-        btnConsumidor.setText("jButton4");
+        btnConsumidor.setText("Activar Consumidor");
         btnConsumidor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConsumidorActionPerformed(evt);
@@ -83,15 +81,18 @@ public class Main extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(136, 136, 136)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnProductor)
-                    .addComponent(LabelNumber))
-                .addGap(129, 129, 129)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LabelName)
-                    .addComponent(btnConsumidor))
-                .addContainerGap(125, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(btnProductor)
+                        .addGap(98, 98, 98)
+                        .addComponent(btnConsumidor))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(149, 149, 149)
+                        .addComponent(LabelNumber)
+                        .addGap(156, 156, 156)
+                        .addComponent(LabelName)))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,11 +209,11 @@ public class Main extends javax.swing.JFrame {
                 if (ValueLabel < 50) {
                     ValueLabel++;
                     Namelabel = Hilo.getName();
-                    try {
+                    /*try {
                         Thread.sleep(300);
                     } catch (InterruptedException ex) {
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    }*/
                 }
                 mutex.release();
                 LabelNumber.setText(ValueLabel+"");
@@ -241,11 +242,11 @@ public class Main extends javax.swing.JFrame {
                 if (ValueLabel > 10) {
                     ValueLabel = ValueLabel-10;
                     Namelabel = Hilo.getName();
-                    try {
+                    /*try {
                         Thread.sleep(300);
                     } catch (InterruptedException ex) {
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    }*/
                 }
                 mutex.release();
                 LabelNumber.setText(ValueLabel+"");
@@ -259,14 +260,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel LabelNumber;
     private javax.swing.JButton btnConsumidor;
     private javax.swing.JButton btnProductor;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
